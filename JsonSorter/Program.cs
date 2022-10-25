@@ -17,7 +17,7 @@ namespace JsonSorter
 
                 Console.WriteLine("Enter the JSON file path");
 
-                var path = Console.ReadLine();
+                var path = Console.ReadLine().Replace("\"", string.Empty);
 
                 var json = await File.ReadAllTextAsync(path);
 
